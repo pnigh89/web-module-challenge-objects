@@ -73,8 +73,27 @@ console.log(feedbackJulius[0].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
+reviews.push({name: "Pete", rating: 3.5, feedback: "Food was great, service was so so."});
+
+console.log (reviews);
+
+for(let i=0; i < reviews.length; i++){
+  if(reviews[i].name === "Reyna"){
+    reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+  }
+}
+
+
+
+console.log (reviews);
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+
+for(let i=0; i < reviews.length; i++){
+  if(reviews[i].name === "Reyna"){
+    reviews.push({feedback: "this place is chill with really cool people, great for getting work done on weekdays"})
+  }
+}
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
