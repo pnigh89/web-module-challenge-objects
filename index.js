@@ -61,6 +61,15 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+let feedbackJulius =[];
+
+for(let i =0; i < reviews.length; i++){
+  if(reviews[i].name === "Julius"){
+    feedbackJulius.push(reviews[i]);
+  }
+}
+
+console.log(feedbackJulius[0].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
