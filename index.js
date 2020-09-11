@@ -77,6 +77,9 @@ reviews.push({name: "Pete", rating: 3.5, feedback: "Food was great, service was 
 
 console.log (reviews);
 
+
+
+
 for(let i=0; i < reviews.length; i++){
   if(reviews[i].name === "Reyna"){
     reviews[i].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
@@ -148,12 +151,17 @@ console.log(getLastReview(reviews))
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(arr, ratings) {
+ function getReviewByRating(arr, rating) {
+
+  let newArray = []
+
    for(i=0; i < arr.length; i++){
-     if (arr[i].rating === ratings ){
-       return arr[i]
+     if (arr[i].rating>=rating && arr[i].rating < rating + 1 ){
+       newArray.push(arr[i])
      }
    }
+
+   return newArray
     /* code here */
   }
 
@@ -173,10 +181,21 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
+  function getLongReviews(arr) {
+
+    let longReviews = []
+
+    for(i=0; i < arr.length; i++) {
+      if (arr[i].feedback.split(' ').length > 15){
+        longReviews.push(arr[i])
+      }
+    }
+
+    return longReviews
     /* code here */
   }
   
+  console.log(getLongReviews(reviews))
 
 /* STRETCH 3:  This challenge is not related to the data above! 
 
